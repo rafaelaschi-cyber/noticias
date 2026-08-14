@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notícia Agora - Blog de Notícias</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="topo">
+            <div class="logo">
+                <span>NOTÍCIA</span> AGORA
+            </div>
+
+            <button class="menu-btn" onclick="abrirMenu()">☰</button>
+
+            <nav id="menu">
+                <a href="#inicio">Início</a>
+                <a href="#politica">Política</a>
+                <a href="#economia">Economia</a>
+                <a href="#tecnologia">Tecnologia</a>
+                <a href="#esportes">Esportes</a>
+                <a href="#entretenimento">Entretenimento</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BARRA DE PESQUISA -->
+    <section class="pesquisa">
+        <input
+            type="text"
+            id="campoBusca"
+            placeholder="Pesquisar notícias..."
+            onkeyup="buscarNoticias()"
+        >
+
+        <button onclick="buscarNoticias()">🔎 Buscar</button>
+    </section>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="inicio">
+
+        <!-- DESTAQUE -->
+        <section class="destaque">
+            <div class="destaque-texto">
+                <span class="categoria">DESTAQUE</span>
+
+                <h1>
+                    Tecnologia transforma a maneira como as pessoas vivem e trabalham
+                </h1>
+
+                <p>
+                    Novas ferramentas digitais estão mudando o cotidiano,
+                    criando oportunidades e trazendo novos desafios para a sociedade.
+                </p>
+
+                <button onclick="lerNoticia('Tecnologia transforma a maneira como as pessoas vivem e trabalham')">
+                    Ler notícia
+                </button>
+            </div>
+        </section>
+
+        <!-- ÚLTIMAS NOTÍCIAS -->
+        <section class="noticias">
+            <div class="titulo-secao">
+                <h2>Últimas notícias</h2>
+                <div></div>
+            </div>
+
+            <div class="grid-noticias" id="listaNoticias">
+
+                <!-- NOTÍCIA 1 -->
+                <article class="card" data-titulo="Mercado financeiro começa semana com novas expectativas">
+                    <div class="imagem imagem1">
+                        <span>ECONOMIA</span>
+                    </div>
+
+                    <div class="card-conteudo">
+                        <small>Hoje • 09:30</small>
+
+                        <h3>
+                            Mercado financeiro começa semana com novas expectativas
+                        </h3>
+
+                        <p>
+                            Analistas acompanham os principais indicadores econômicos
+                            e as mudanças no mercado.
+                        </p>
+
+                        <button onclick="lerNoticia('Mercado financeiro começa semana com novas expectativas')">
+                            Leia mais →
+                        </button>
+                    </div>
+                </article>
+
+                <!-- NOTÍCIA 2 -->
+                <article class="card" data-titulo="Novo avanço tecnológico promete mudar o futuro da internet">
+                    <div class="imagem imagem2">
+                        <span>TECNOLOGIA</span>
+                    </div>
+
+                    <div class="card-conteudo">
+                        <small>Hoje • 10:15</small>
+
+                        <h3>
+                            Novo avanço tecnológico promete mudar o futuro da internet
+                        </h3>
+
+                        <p>
+                            Pesquisadores apresentam novidades que podem transformar
+                            a experiência dos usuários.
+                        </p>
+
+                        <button onclick="lerNoticia('Novo avanço tecnológico promete mudar o futuro da internet')">
+                            Leia mais →
+                        </button>
+                    </div>
+                </article>
+
+                <!-- NOTÍCIA 3 -->
+                <article class="card" data-titulo="Equipe se prepara para grande campeonato nacional">
+                    <div class="imagem imagem3">
+                        <span>ESPORTES</span>
+                    </div>
+
+                    <div class="card-conteudo">
+                        <small>Hoje • 11:00</small>
+
+                        <h3>
+                            Equipe se prepara para grande campeonato nacional
+                        </h3>
+
+                        <p>
+                            Jogadores intensificam os treinamentos antes da competição
+                            que começa nos próximos dias.
+                        </p>
+
+                        <button onclick="lerNoticia('Equipe se prepara para grande campeonato nacional')">
+                            Leia mais →
+                        </button>
+                    </div>
+                </article>
+
+                <!-- NOTÍCIA 4 -->
+                <article class="card" data-titulo="Governo anuncia novas medidas para os próximos meses">
+                    <div class="imagem imagem4">
+                        <span>POLÍTICA</span>
+                    </div>
+
+                    <div class="card-conteudo">
+                        <small>Hoje • 11:45</small>
+
+                        <h3>
+                            Governo anuncia novas medidas para os próximos meses
+                        </h3>
+
+                        <p>
+                            Novas propostas foram apresentadas durante uma reunião
+                            nesta manhã.
+                        </p>
+
+                        <button onclick="lerNoticia('Governo anuncia novas medidas para os próximos meses')">
+                            Leia mais →
+                        </button>
+                    </div>
+                </article>
+
+                <!-- NOTÍCIA 5 -->
+                <article class="card" data-titulo="Festival reúne música e cultura neste fim de semana">
+                    <div class="imagem imagem5">
+                        <span>CULTURA</span>
+                    </div>
+
+                    <div class="card-conteudo">
+                        <small>Hoje • 12:20</small>
+
+                        <h3>
+                            Festival reúne música e cultura neste fim de semana
+                        </h3>
+
+                        <p>
+                            Evento contará com atrações musicais, exposições e
+                            atividades culturais.
+                        </p>
+
+                        <button onclick="lerNoticia('Festival reúne música e cultura neste fim de semana')">
+                            Leia mais →
+                        </button>
+                    </div>
+                </article>
+
+                <!-- NOTÍCIA 6 -->
+                <article class="card" data-titulo="Ciência apresenta descobertas importantes">
+                    <div class="imagem imagem6">
+                        <span>CIÊNCIA</span>
+                    </div>
+
+                    <div class="card-conteudo">
+                        <small>Hoje • 13:10</small>
+
+                        <h3>
+                            Ciência apresenta descobertas importantes
+                        </h3>
+
+                        <p>
+                            Novos estudos podem ajudar pesquisadores a compreender
+                            melhor diversos fenômenos.
+                        </p>
+
+                        <button onclick="lerNoticia('Ciência apresenta descobertas importantes')">
+                            Leia mais →
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+            <p id="semResultados">
+                Nenhuma notícia encontrada.
+            </p>
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section class="newsletter">
+            <div>
+                <h2>Receba as principais notícias</h2>
+                <p>
+                    Cadastre seu e-mail e receba novidades diretamente na sua caixa de entrada.
+                </p>
+            </div>
+
+            <form onsubmit="inscrever(event)">
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Digite seu e-mail"
+                    required
+                >
+
+                <button type="submit">Inscrever-se</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="footer-conteudo">
+
+            <div>
+                <h2>NOTÍCIA AGORA</h2>
+                <p>
+                    Informação, notícias e conteúdo para você ficar por dentro
+                    dos principais acontecimentos.
+                </p>
+            </div>
+
+            <div>
+                <h3>Redes sociais</h3>
+
+                <div class="redes">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">YouTube</a>
+                    <a href="#">X</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Notícia Agora — Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
