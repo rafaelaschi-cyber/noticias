@@ -1,0 +1,557 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f5f7;
+    color: #202124;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background: #111827;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.topo {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #ef4444;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ef4444;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* =========================
+   PESQUISA
+========================= */
+
+.pesquisa {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 25px;
+
+    display: flex;
+    gap: 10px;
+}
+
+.pesquisa input {
+    flex: 1;
+    padding: 14px 18px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    font-size: 16px;
+    outline: none;
+}
+
+.pesquisa input:focus {
+    border-color: #ef4444;
+}
+
+.pesquisa button {
+    border: none;
+    background: #ef4444;
+    color: white;
+
+    padding: 0 25px;
+    border-radius: 8px;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pesquisa button:hover {
+    background: #dc2626;
+}
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 25px;
+}
+
+/* =========================
+   DESTAQUE
+========================= */
+
+.destaque {
+    min-height: 430px;
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: flex-end;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.1)
+        ),
+        linear-gradient(135deg, #1e3a8a, #7f1d1d);
+
+    margin-bottom: 50px;
+}
+
+.destaque-texto {
+    max-width: 750px;
+    padding: 45px;
+    color: white;
+}
+
+.categoria {
+    background: #ef4444;
+    padding: 7px 12px;
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.destaque h1 {
+    font-size: 42px;
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.destaque p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #e5e7eb;
+}
+
+.destaque button {
+    margin-top: 25px;
+
+    padding: 13px 22px;
+    border: none;
+    border-radius: 7px;
+
+    background: white;
+    color: #111827;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.destaque button:hover {
+    background: #ef4444;
+    color: white;
+}
+
+/* =========================
+   TÍTULOS
+========================= */
+
+.titulo-secao {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.titulo-secao h2 {
+    font-size: 28px;
+}
+
+.titulo-secao div {
+    height: 3px;
+    width: 60px;
+    background: #ef4444;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.grid-noticias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   IMAGENS DOS CARDS
+========================= */
+
+.imagem {
+    height: 190px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 15px;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.imagem span {
+    background: #ef4444;
+    color: white;
+
+    padding: 6px 10px;
+    border-radius: 5px;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.imagem1 {
+    background: linear-gradient(135deg, #064e3b, #10b981);
+}
+
+.imagem2 {
+    background: linear-gradient(135deg, #1e1b4b, #7c3aed);
+}
+
+.imagem3 {
+    background: linear-gradient(135deg, #172554, #2563eb);
+}
+
+.imagem4 {
+    background: linear-gradient(135deg, #450a0a, #dc2626);
+}
+
+.imagem5 {
+    background: linear-gradient(135deg, #581c87, #ec4899);
+}
+
+.imagem6 {
+    background: linear-gradient(135deg, #164e63, #06b6d4);
+}
+
+/* =========================
+   CONTEÚDO DO CARD
+========================= */
+
+.card-conteudo {
+    padding: 22px;
+}
+
+.card-conteudo small {
+    color: #777;
+}
+
+.card h3 {
+    font-size: 20px;
+    line-height: 1.3;
+    margin: 10px 0;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.card button {
+    margin-top: 18px;
+
+    border: none;
+    background: transparent;
+
+    color: #ef4444;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.card button:hover {
+    color: #b91c1c;
+}
+
+/* =========================
+   SEM RESULTADOS
+========================= */
+
+#semResultados {
+    display: none;
+
+    text-align: center;
+    padding: 50px;
+
+    color: #777;
+}
+
+/* =========================
+   NEWSLETTER
+========================= */
+
+.newsletter {
+    margin: 70px 0;
+
+    background: #111827;
+    color: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.newsletter h2 {
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    color: #d1d5db;
+}
+
+.newsletter form {
+    display: flex;
+}
+
+.newsletter input {
+    padding: 14px;
+    width: 260px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 7px 0 0 7px;
+}
+
+.newsletter button {
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 0 7px 7px 0;
+
+    background: #ef4444;
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background: #0b1120;
+    color: white;
+    margin-top: 50px;
+}
+
+.footer-conteudo {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 50px 25px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+
+.footer-conteudo h2 {
+    margin-bottom: 15px;
+}
+
+.footer-conteudo p {
+    max-width: 500px;
+    color: #9ca3af;
+    line-height: 1.6;
+}
+
+.footer-conteudo h3 {
+    margin-bottom: 15px;
+}
+
+.redes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.redes a {
+    color: #d1d5db;
+    text-decoration: none;
+}
+
+.redes a:hover {
+    color: #ef4444;
+}
+
+.copyright {
+    border-top: 1px solid #1f2937;
+
+    padding: 20px;
+    text-align: center;
+
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+
+        background: #111827;
+
+        flex-direction: column;
+        gap: 0;
+    }
+
+    nav.ativo {
+        display: flex;
+    }
+
+    nav a {
+        padding: 18px 25px;
+        border-top: 1px solid #1f2937;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .grid-noticias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .newsletter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .pesquisa {
+        flex-direction: column;
+    }
+
+    .pesquisa button {
+        padding: 14px;
+    }
+
+    .destaque {
+        min-height: 500px;
+    }
+
+    .destaque-texto {
+        padding: 25px;
+    }
+
+    .destaque h1 {
+        font-size: 30px;
+    }
+
+    .grid-noticias {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter form {
+        width: 100%;
+    }
+
+    .newsletter input {
+        width: 100%;
+    }
+
+    .footer-conteudo {
+        grid-template-columns: 1fr;
+    }
+}
